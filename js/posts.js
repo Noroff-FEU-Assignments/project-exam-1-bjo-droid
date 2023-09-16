@@ -8,7 +8,7 @@ async function getPost() {
     const response = await fetch(postUrl);
     const post = await response.json();
     console.log(post);
-    document.title = "Bjotech | " + post.title.rendered;
+    document.title = "Bjotech | Article about " + post.title.rendered;
     document.querySelector(".blog-header h1").innerHTML = post.title.rendered;
     document.querySelector(".blog-image img").src =
       post._embedded["wp:featuredmedia"][0].source_url;
