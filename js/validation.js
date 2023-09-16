@@ -13,7 +13,7 @@ if(name.length < 5){
     return false;
 }
 if(subject.length < 15){
-    text = "Please Enter Correct Subject";
+    text = "Please Enter More then 15 Characters";
     error_message.innerHTML = text;
     return false;
 }

@@ -10,7 +10,9 @@ async function getPosts() {
         for (let i = 0; i < posts.length; i++) {
             article.innerHTML += `<div class="card">
             <h4>${posts[i].title.rendered}</h3>
+            <a href="posts.html?id=${posts[i].id}">
             <img src="${posts[i]._embedded["wp:featuredmedia"][0].source_url}" alt="${posts[i]._embedded["wp:featuredmedia"][0].alt_text}">
+            </a>
             <p>${posts[i].excerpt.rendered}</p>
             <button class="btn">
             <a href="posts.html?id=${posts[i].id}">Read more</a>
